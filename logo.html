@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Logo demo </title>
+        <script src="logo.js"></script>
+    </head>
+    <body>
+        <div id="iconsole">
+            <div id="prev"></div>
+            <input id="prompt"/>
+            <button id="evaluate">Evaluate</button>
+        </div>
+        <canvas id="main-canvas"></canvas>
+        <script>
+            function $(id) {
+                return document.getElementById(id);
+            }
+            var can = $('main-canvas'),
+                ctx = can.getContext('2d');
+            can.width = 800;
+            can.height = 600;
+            var turtle = new Turtle(drawCback(ctx, new Bounds(800, 600)));
+            turtle.state.x = 400;
+            turtle.state.y = 300;
+            $('prompt').onkeypress = function(e) {
+                if(e.keyCode === 13) {
+                    $('evaluate').click();
+                }
+            };
+            $('evaluate').onclick = function() {
+                var txt = $('prompt').value,
+                    cmd = parseLogoCmd(txt);
+                turtle.apply(cmd);
+                $('prev').innerHTML += '<br/>' + txt;
+                $('prompt').value = '';
+            };
+        </script>
+    </body>
+</html>

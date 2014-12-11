@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="logo.js"></script>
+    <script src="lsys.js"></script>
+    <script src="main.js"></script>
+    <style>
+    body {
+        text-align: center;
+    }
+    #main-canvas {
+        border: 2px inset black;
+        float: right;
+    }
+    #modiv {
+        float: left;
+    }
+    div, canvas {
+        padding: 0.5em;
+    }
+    h3 {
+        margin-top: 0.3em;
+    }
+    .border-div {
+        margin: 0.2em;
+        border: 2px solid black;
+    }
+    .error {
+        color: red;
+    }
+    </style>
+    <title> L-System Demo </title>
+</head>
+<body>
+    <div id="modiv">
+        <div>
+            <h3> Grammar </h3>
+            <textarea id="grammar-txt" rows="10" cols="80"></textarea>
+        </div>
+        <div>
+            <h3> Draw rules </h3>
+            <textarea id="draw-txt" rows="10" cols="80"></textarea>
+        </div>
+        <div>
+            <h3> Axiom </h3>
+            <input id="axiom-txt" size="50"/>
+        </div>
+        <div id="controls-div" class="border-div">
+            <h3> Controls </h3>
+            <button id="parse-button">Parse</button>
+            <button id="iterate-button">Iterate</button>
+            <select id="preset-select"></select>
+            <button id="load-preset-btn">Load preset</button>
+        </div>
+        <div id="status-div" class="border-div">
+            <h3> Status </h3>
+            <div id="log-area"></div>
+        </div>
+    </div>
+    <canvas id="main-canvas"></canvas>
+</body>
+</html>
