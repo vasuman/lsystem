@@ -9,7 +9,7 @@ Production consist of the symbol to be expanded followed by a `:` then a
 sequence of symbols each separated by a whitespace. Sample in the form
 
 ```
-SYM : S<sub>1</sub> S<sub>2</sub> ... S<sub>n</sub>
+SYM : S1 S2 ... Sn
 ```
 
 ## Logo Commands
