@@ -37,11 +37,11 @@ Bounds.prototype.finalize = function () {
 
 function drawCback(ctx, b) {
     return function (oldX, oldY, state) {
-        // TODO: Color
         var srcX = (oldX - b.offsetX) * b.scale,
             srcY = (oldY - b.offsetY) * b.scale,
             dstX = (state.x - b.offsetX) * b.scale,
             dstY = (state.y - b.offsetY) * b.scale;
+        ctx.strokeStyle = state.color;
         ctx.beginPath();
         ctx.moveTo(srcX, srcY);
         ctx.lineTo(dstX, dstY);

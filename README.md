@@ -55,3 +55,5 @@ Draw commands are written in the form,
 ```
 SYM = <logo command>
 ```
+
+Check out the presets.
