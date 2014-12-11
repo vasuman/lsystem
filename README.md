@@ -14,39 +14,39 @@ SYM : S1 S2 ... Sn
 
 ## Logo Commands
 
-1. FD `x`
+* FD `x`
 
 Draws a line `x` units in length forward.
 
-2. BK `x`
+* BK `x`
 
 Draws a line `x` units backwards.
 
-3. COLOR `x`
+* COLOR `x`
 
 Sets the color of line drawn to `x`.
 
-4. RT `x`
+* RT `x`
 
 Turns right by `x` degrees
 
-5. LT `x`
+* LT `x`
 
 Turns left by `x` degrees
 
-6. PUSH
+* PUSH
 
 Saves the turtle state in the stack.
 
-7. POP
+* POP
 
 Pops the stack into the turtle's state.
 
-8. REPEAT `num` (`cmd`)
+* REPEAT `num` (`cmd`)
 
 Repeats the command `cmd`, `num` times. `cmd` must be parenthesized.
 
-9. DO (`cmd1`) ... (`cmdn`)
+* DO (`cmd1`) ... (`cmdn`)
 
 Executes the commands `cmd1` to `cmdn` in sequence. Each command must be
 parenthesized.
